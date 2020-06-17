@@ -46,5 +46,5 @@ export { auth, storage };
 
 ```
 
-Checkout the full usage of Auth and Storage [here](https://github.com/nhost/nhost-js-sdk).
+##### Checkout the full usage of Auth and Storage [here](https://github.com/nhost/nhost-js-sdk).
 ---------------------------------------------------------------------------------------------------------------------------
