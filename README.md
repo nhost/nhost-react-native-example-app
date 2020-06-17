@@ -7,8 +7,44 @@ npx react-native init <Project Name>
 ```
 
 ---------------------------------------------------------------------------------------------------------------------------
+## Adding the apis
+Creating a file `src/helpers/api.js`
 
-## Add nhost-js-sdk 
+```
+export const GRAPHQL_ENDPOINT = 'https://hasura-[id].nhost.app/v1/graphql';
+export const BACKEND_ENDPOINT = 'https://backend-[id].nhost.app';
+
+export const X_HASURA_ADMIN_SECRET = '<Your_Secret>';
+```
+
+---------------------------------------------------------------------------------------------------------------------------
+
+## Adding nhost-js-sdk 
+
+##### Installation
+
+`npm install --save nhost-js-sdk`
 
 
+##### Initialising Nhost Auth & Storage
+Creating a file `src/helpers/nhostSdk/index.js`
+
+```
+import nhost from 'nhost-js-sdk';
+import { BACKEND_ENDPOINT } from '../api';
+
+const config = {
+  endpoint: BACKEND_ENDPOINT,
+};
+
+nhost.initializeApp(config);
+
+const auth = nhost.auth();
+const storage = nhost.storage();
+
+export { auth, storage };
+
+```
+
+Checkout the full usage of Auth and Storage [here](https://github.com/nhost/nhost-js-sdk).
 ---------------------------------------------------------------------------------------------------------------------------
