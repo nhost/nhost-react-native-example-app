@@ -1,5 +1,14 @@
 # nhost-react-native-example-app
 
-- [ ] Add Latest React Native Project
-- [ ] Integrate nhost-js-sdk 
-- [ ] Create a simple example with GraphQL
+## Creating React Native Project
+
+```javascript
+npx react-native init <Project Name>
+```
+
+---------------------------------------------------------------------------------------------------------------------------
+
+## Add nhost-js-sdk 
+
+
+---------------------------------------------------------------------------------------------------------------------------
