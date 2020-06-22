@@ -10,7 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "nhost-js-sdk": "^2.0.4",
+    "@react-native-community/async-storage": "^1.11.0",
+    "axios": "^0.19.2",
+    "nhost-js-sdk": "1.2.0",
     "react": "16.11.0",
     "react-native": "0.62.2"
   },
