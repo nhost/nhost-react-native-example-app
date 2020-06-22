@@ -1,6 +1,6 @@
 import { GRAPHQL_ENDPOINT, X_HASURA_ADMIN_SECRET } from "./api";
 
-export const post = ({ data, token }) => ({
+export const getRequestObject = ({ data, token }) => ({
   method: 'POST',
   url: GRAPHQL_ENDPOINT,
   data,
