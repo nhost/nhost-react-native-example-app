@@ -1,5 +1,3 @@
-# nhost-react-native-example-app
-
 ## Nhost React Native Example App
 
 [Nhost](https://nhost.io) example app in React Native using [Hasura](https://hasura.io).
