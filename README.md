@@ -62,4 +62,18 @@ export { auth, storage };
 ```
 
 ##### Checkout the full usage of Auth and Storage [here](https://github.com/nhost/nhost-js-sdk).
+
+## A Simple Auth can be found in this repo.
+
+##### Working GIF
+
+| iOS                                          | Android                                      |
+|----------------------------------------------|----------------------------------------------|
+| ![](nhostExample.gif)                        |                                              |
+
 ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
