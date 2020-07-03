@@ -63,7 +63,7 @@ export { auth, storage };
 
 ##### Checkout the full usage of Auth and Storage [here](https://github.com/nhost/nhost-js-sdk).
 
-## A Simple Auth can be found in this repo.
+## A Simple Working Auth can be found in this repo.
 
 ##### Working GIF
 
@@ -73,7 +73,47 @@ export { auth, storage };
 
 ---------------------------------------------------------------------------------------------------------------------------
 
+## Working with GraphQL
 
+Look at the file in  `src/helepers/getRequestObject.js`
 
+```
+import { GRAPHQL_ENDPOINT, X_HASURA_ADMIN_SECRET } from "./api";
+
+export const getRequestObject = ({ data, token }) => ({
+  method: 'POST',
+  url: GRAPHQL_ENDPOINT,
+  data,
+  headers: {
+    Authorization: `Bearer="${token}"`,
+    'x-hasura-admin-secret': X_HASURA_ADMIN_SECRET
+  },
+})
+
+// A Sample GraphQL Query
+export const getSkills = () => {
+  return {
+    query: `query getSkills {
+      tags {
+        tag
+      }
+    }`
+  }
+}
+
+// A function which returns a response to the axios request, wrapping the graphQL Function 
+const fetchSkills = async (_, token) => {
+  const response = await axios(
+    getRequestObject({
+      data: getSkills(),
+      token
+    })
+  );
+  return response;
+}
+
+```
+
+Every `query` or `mutation` can be composed as shown above. 
 
 
