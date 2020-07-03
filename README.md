@@ -114,6 +114,6 @@ const fetchSkills = async (_, token) => {
 
 ```
 
-Every `query` or `mutation` can be composed as shown above. 
+Every `query` or `mutation` can be composed as shown above to work with Hasura GraphQL. 
 
 
