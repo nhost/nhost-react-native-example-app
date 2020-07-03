@@ -23,7 +23,9 @@ const RegisterComponent = (props) => {
   const handleRegister = async () => {
     if (formDataValid) {
       try {
-        await auth.register(formState.email, formState.password)
+        await auth.register(formState.email, formState.password);
+        await auth.login(formState.email, formState.password);
+        props?.navigation?.navigate('AppScreen')
       } catch (e) {
         Alert.alert('Error Registering Account', 'Try using another email.')
       }
