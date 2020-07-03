@@ -7,18 +7,15 @@
  */
 
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import 'react-native-gesture-handler';
 import AppRoot from './src/AppRoot';
 
+console.disableYellowBox = true;
 
 const App = () => {
   return (
     <AppRoot />
   );
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default App;
